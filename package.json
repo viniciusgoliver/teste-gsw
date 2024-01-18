@@ -8,7 +8,7 @@
   "scripts": {
     "install:app": "cd backend && yarn && cd ../frontend && yarn",
     "test:unit": "cd backend && npm run test",
-    "docker:build": "docker-compose up -d --build",
+    "docker:build": "docker-compose up -d --build && docker ps",
     "docker:down": "docker-compose down",
     "docker:list:container": "docker ps"
   }
