@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
-db = db.getSiblingDB('gws');
+db = db.getSiblingDB("gsw");
 db.createUser({
-  user: 'mongo',
-  pwd: 'mongo',
+  user: "mongo",
+  pwd: "mongo",
   roles: [
     {
-      role: 'dbOwner',
-      db: 'gws',
+      role: "dbOwner",
+      db: "gsw",
     },
   ],
 });
