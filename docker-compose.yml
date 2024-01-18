@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  backend:
+    image: node:20-alpine
+    container_name: backend
+    working_dir: /usr/src/app
+    command: ["yarn", "start:dev"]
+    expose:
+      - 3001
+    ports:
+      - 3001:3001
+    volumes:
+      - ./backend:/usr/src/app:rw
+    environment:
+      - NODE_ENV=development
+
+  frontend:
+    image: node:20-alpine
+    container_name: frontend
+    working_dir: /usr/src/app
+    command: ["yarn", "dev"]
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/usr/src/app:rw
+    environment:
+      - NODE_ENV=development
+
+  mongo:
+    container_name: mongo
+    image: mongo:4.2.1
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_DATABASE: gsw
+    volumes:
+      - ./mongodb-entrypoint.js:/docker-entrypoint-initdb.d/mongodb-entrypoint.js
