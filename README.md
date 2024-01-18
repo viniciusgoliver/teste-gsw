@@ -27,11 +27,29 @@ Este é um simples aplicativo que simula transações bancárias. Possui funcion
 
 ```bash
   cd teste-gsw
-  npm run docker:build
+  yarn installÇapp
+  yarn docker:build
+  yarn docker:list:container
 ```
 ** OBS Não será necessãrio executar o npm run install, pois o docker jã executa esta tarefa em tempo de exec.
 - Abra <http://localhost:3000> no seu navegador.
 
+## Comandos Importantes
+
+- yarn install:app
+  * Responsável por baixar as dependências do backend e frontend
+
+- yarn test:unit
+  * É este comando que roda os testes unitários implementados no service do comudlo account.
+
+- yarn docker:build
+  * Responsável por buildar uma nova imagem no docker
+
+- yarn docker:down
+  * Responsável por deletar o container
+
+- yarn docker:list:container
+  * Este comando é responsável por listar os containers em execução.
 
 ## Estrutura do Projeto
 
@@ -146,7 +164,7 @@ O projeto está organizado em 5 páginas:
 Para executar o teste, basta rodar o comando abaixo na raiz.
 
 ```bash
-  npm run test:unit
+  yarn test:unit
 ```
 
 ## Notas Adicionais

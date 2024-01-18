@@ -5,7 +5,7 @@ services:
     image: node:20-alpine
     container_name: backend
     working_dir: /usr/src/app
-    command: ["yarn", "start:dev"]
+    command: ["yarn", "start:dev", "yarn", "global add @nestjs/cli"]
     expose:
       - 3001
     ports:
