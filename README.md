@@ -15,6 +15,24 @@ Este é um simples aplicativo que simula transações bancárias. Possui funcion
 - Docker
 - Docker Compose
 
+## Como Começar
+
+- Clone o repositório
+
+```bash
+  https://github.com/viniciusgoliver/teste-gsw.git
+```
+
+- Instale as dependências:
+
+```bash
+  cd teste-gsw
+  npm run docker:build
+```
+** OBS Não será necessãrio executar o npm run install, pois o docker jã executa esta tarefa em tempo de exec.
+- Abra <http://localhost:3000> no seu navegador.
+
+
 ## Estrutura do Projeto
 
 O projeto está organizado em 5 páginas:
@@ -111,30 +129,6 @@ O projeto está organizado em 5 páginas:
   curl --request GET \
   --url http://localhost:3001/account/saldo
 ```
-
-## Como Começar
-
-- Clone o repositório
-
-```bash
-  https://github.com/viniciusgoliver/teste-gsw.git
-```
-
-- Instale as dependências:
-
-```bash
-  cd teste-gsw
-  npm install
-```
-
-- Inicie os serviços via docker:
-
-```bash
-  npm run docker:build
-```
-
-- Abra <http://localhost:3000> no seu navegador.
-
 
 ## Testes
 
