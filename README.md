@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este é um simples aplicativo que simula transdações bancárias. Possui funcionalidades como saque, depósito, histórico de transações (extrato) e verificação de saldo. A aplicação interage com uma API backend para realizar essas operações.
+Este é um simples aplicativo que simula transações bancárias. Possui funcionalidades como saque, depósito, histórico de transações (extrato) e verificação de saldo. A aplicação interage com uma API backend para realizar essas operações.
 
 ## Tecnologias Utilizadas
 
